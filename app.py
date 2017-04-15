@@ -1,32 +1,27 @@
-from flask import Flask, render_template, jsonify, request
+# from flask import Flask, render_template, jsonify, request
 from os import environ
 
 
 
 app = Flask(__name__)
 
+
 @app.route('/', methods=["GET"])
 def index():
 
-
-
-    options = ["analyze-by-handle", "analyze-by-trend"]
+    options = ["sentiment-analysis", "political-analysis", "myers-briggs", "twitter-engagement", "personality" , "emotional-analysis"]
     return render_template("index.html" ,options = options)
 
-@app.route('/postto', methods=["POST"])
+@app.route('/post', methods=["POST"])
 def post():
     if request.method == "POST":
         form = request.form
-
-        for key in form.keys():
-            print(form[key])
-
         try:
             selection = form["selected"]
-            text = form["requested"]
+            handle = form["requested"]
             print(selection)
             print(text)
-            return render_template("index.html")
+            return render_template("charts.html")
         except KeyError:
             print("found error")
             return '''<HTML>
@@ -36,6 +31,41 @@ def post():
             '''
     else:
         return render_template("index.html", options = ["shit", "shit"])
+
+@app.route('/average')
+def barGraph():
+    data1 = [] #list of labels
+    data2 = [] #list of
+    pass
+@app.route('/changeOver')
+def lineGraph():
+    pass
+def peakCircles():
+    pass
+def gaugeChart():
+    pass
+@app.route('/post' , methods = ["POST"])
+def queryOnUser():
+    if request.method == 'POST':
+        form = request.form
+        twitterHandle = form['user-handle']
+        selection = form['type']
+        #pass data in and do processing
+
+        if selection == "sentiment-analysis":
+            pass
+        elif selection == "political-analysis":
+            pass
+        elif selection == "myers-briggs":
+            pass
+        elif selection == "twitter-engagement":
+            pass
+        elif selection == "personality":
+            pass
+        elif selection == "emotion":
+            pass
+
+
 
 
 
