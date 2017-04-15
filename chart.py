@@ -11,7 +11,7 @@ def one_month_average(screen_name, data_type):
     for key in keys:
         monthdata[key.strip('\n')] = data[i].strip('\n').strip("'")
         i += 1
-
+    infile.close()
     if data_type == 'sentiment':
         returndata[data_type+'_average'] = monthdata[data_type]
     elif data_type == 'twitter_engagement':
@@ -234,7 +234,7 @@ def six_month_average(screen_name, data_type):
         for month in monthdata:
             total += float(monthdata[month][30]['emotion_surprise'])
         returndata['emotion_surprise'+'_average'] = total/6
-
+    infile.close()
     return returndata
 
 def one_year_average(screen_name, data_type):
@@ -420,5 +420,5 @@ def one_year_average(screen_name, data_type):
         for month in monthdata:
             total += float(monthdata[month][30]['emotion_surprise'])
         returndata['emotion_surprise'+'_average'] = total/12
-
+    infile.close()
     return returndata

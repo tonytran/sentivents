@@ -337,12 +337,12 @@ function popup() {
   var data = `
 
   <select name = "api" id = "api">
-    <option id = "selected" value = sentiment> sentiment-analysis </option>
-    <option id = "selected" value = political> political-analysis </option>
-    <option id = "selected" value = twitter-engagement> twitter-engagement </option>
-    <option id = "selected" value = personality> personality-analysis </option>
-    <option id = "selected" value = emotion-analysis> emotional-analysis </option>
-    <option id = "selected" value = persona-analysis> persona-analysis </option>
+    <option id = "selected" value = "sentiment"> sentiment-analysis </option>
+    <option id = "selected" value = "political"> political-analysis </option>
+    <option id = "selected" value = "twitter_engagement"> twitter-engagement </option>
+    <option id = "selected" value = "personality"> personality-analysis </option>
+    <option id = "selected" value = "emotion"> emotional-analysis </option>
+    <option id = "selected" value = "personas"> persona-analysis </option>
 
   </select>
 `
@@ -385,19 +385,19 @@ function submit2() {
 function submit() {
   var handle = $("#twitterHandle").val();
   var api = $("#api").val();
-  alert(handle);
+  //alert(handle);
   $.ajax({
     method: "POST",
     url: "/charts/" + handle + "/" + api,
     contentType: 'application/json;charset=UTF-8',
     //data : {'data': handle},
     success: function(response) {
-      alert("save");
+      //alert("save");
       console.log(response);
     },
 
     failure: function(error) {
-      alert("failred!");
+      //alert("failred!");
       console.log(error);
     }
   });
