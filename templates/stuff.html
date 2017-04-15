@@ -1,0 +1,45 @@
+<html>
+<head>
+
+<title> Sentivents IO </title>
+<link rel ="stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+<script
+  src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+
+
+
+
+<body>
+<h1> Sentivents IO </h1>
+<form action = "/post" method = "POST" id = "form" >
+<div class="form-group">
+<select name = "selected" >
+{% for item in options %}
+  <option id = "selected" value = {{item}} > {{item}} </option>
+{% endfor %}
+</select>
+</div>
+<div class="form-group">
+<p> Enter in a twitter handle you want to <strong><i>anal</i></strong>yze </p>
+<input id = "requested" name = "requested" type = "text"/>
+</div>
+<p><input type = "submit" value = "submit" onclick ="return submit()"/></p>
+</form>
+</body>
+
+
+</html>
+<script>
+function submit() {
+  return true;
+}
+</script>
