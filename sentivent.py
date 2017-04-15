@@ -193,10 +193,10 @@ def csv_write(month_data, screen_name):
 
     with open('data\\'+screen_name+'_indico.csv', 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(["month_year","handle","sentiment","twitter_engagementent","personality:openness","personality:extraversion","personality:agreeableness",
-        "personality:conscientiousness","political:Libertarian","political:Liberal","political:Green","political:Conservative","personas:advocate",
-        "personas:debater","personas:mediator","personas:consul","personas:executive","personas:adventurer","personas:logistician","personas:commander",
-        "personas:entrepreneur","personas:logician","personas:protagonist","personas:architect","personas:campaigner","personas:entertainer","personas:defender","personas:virtuoso","emotion:anger","emotion:joy","emotion:fear","emotion:sadness","emotion:surprise"])
+        writer.writerow(["month_year","handle","sentiment","twitter_engagement","personality_openness","personality_extraversion","personality_agreeableness",
+        "personality_conscientiousness","political_Libertarian","political_Liberal","political_Green","political_Conservative","personas_advocate",
+        "personas_debater","personas_mediator","personas_consul","personas_executive","personas_adventurer","personas_logistician","personas_commander",
+        "personas_entrepreneur","personas_logician","personas_protagonist","personas_architect","personas_campaigner","personas_entertainer","personas_defender","personas_virtuoso","emotion_anger","emotion_joy","emotion_fear","emotion_sadness","emotion_surprise"])
         #each month is a list of dicts
         for month in month_data:
             writer.writerow(["'"+month+"'","'"+screen_name+"'",month_data[month][0]['sentiment'],month_data[month][1]['twitter_engagement'],

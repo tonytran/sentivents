@@ -1,0 +1,89 @@
+
+C:\Users\Daniel\Desktop\Python Workspace\sentivents>python chart.py
+{'sentiment_average': '0.652510999'}
+{'twitter_engagement_average': '0.565117822'}
+{'emotion_anger_average': '0.111961144', 'emotion_joy_average': '0.170175257', '
+emotion_fear_average': '0.336333888', 'emotion_sadness_average': '0.30580829', '
+emotion_surprise_average': '0.075721425'}
+{'political_Libertarian_average': '0.229037836', 'political_Liberal_average': '0
+.15752204', 'political_Green_average': '0.392361195', 'political_Conservative_av
+erage': '0.221078906'}
+{'personas_advocate_average': '0.070567975', 'personas_debater_average': '0.0637
+00064', 'personas_mediator_average': '0.076993199', 'personas_consul_average': '
+0.043133888', 'personas_executive_average': '0.047531379', 'personas_adventurer_
+average': '0.063145924', 'personas_logistician_average': '0.066421581', 'persona
+s_commander_average': '0.059804587', 'personas_entrepreneur_average': '0.0509815
+11', 'personas_logician_average': '0.087960989', 'personas_protagonist_average':
+ '0.054779025', 'personas_architect_average': '0.080417307', 'personas_campaigne
+r_average': '0.058047274', 'personas_entertainer_average': '0.046099848', 'perso
+nas_defender_average': '0.057866829', 'personas_virtuoso_average': '0.072548619'
+}
+{'personality_openness_average': '0.542213349', 'personality_extraversion_averag
+e': '0.454564844', 'personality_agreeableness_average': '0.474953407', 'personal
+ity_conscientiousness_average': '0.492062294'}
+
+C:\Users\Daniel\Desktop\Python Workspace\sentivents>python chart.py
+{'sentiment_average': '0.652510999'}
+{'twitter_engagement_average': '0.565117822'}
+{'emotion_anger_average': '0.111961144', 'emotion_joy_average': '0.170175257', '
+emotion_fear_average': '0.336333888', 'emotion_sadness_average': '0.30580829', '
+emotion_surprise_average': '0.075721425'}
+{'political_Libertarian_average': '0.229037836', 'political_Liberal_average': '0
+.15752204', 'political_Green_average': '0.392361195', 'political_Conservative_av
+erage': '0.221078906'}
+{'personas_advocate_average': '0.070567975', 'personas_debater_average': '0.0637
+00064', 'personas_mediator_average': '0.076993199', 'personas_consul_average': '
+0.043133888', 'personas_executive_average': '0.047531379', 'personas_adventurer_
+average': '0.063145924', 'personas_logistician_average': '0.066421581', 'persona
+s_commander_average': '0.059804587', 'personas_entrepreneur_average': '0.0509815
+11', 'personas_logician_average': '0.087960989', 'personas_protagonist_average':
+ '0.054779025', 'personas_architect_average': '0.080417307', 'personas_campaigne
+r_average': '0.058047274', 'personas_entertainer_average': '0.046099848', 'perso
+nas_defender_average': '0.057866829', 'personas_virtuoso_average': '0.072548619'
+}
+{'personality_openness_average': '0.542213349', 'personality_extraversion_averag
+e': '0.454564844', 'personality_agreeableness_average': '0.474953407', 'personal
+ity_conscientiousness_average': '0.492062294'}
+{'sentiment_average': 0.620288317}
+{'twitter_engagement_average': 0.5442250706666666}
+{'emotion_anger_average': 0.11058871399999999, 'emotion_joy_average': 0.21317828
+149999998, 'emotion_fear_average': 0.27662878566666665, 'emotion_sadness_average
+': 0.3176880955, 'emotion_surprise_average': 0.08191612416666666}
+{'political_Libertarian_average': 0.188510445, 'political_Liberal_average': 0.17
+922524133333337, 'political_Green_average': 0.43890734400000003, 'political_Cons
+ervative_average': 0.193356966}
+{'personas_advocate_average': 0.07414111033333334, 'personas_debater_average': 0
+.061947738999999995, 'personas_mediator_average': 0.08195269783333332, 'personas
+_consul_average': 0.046440183999999995, 'personas_executive_average': 0.04507674
+3166666676, 'personas_adventurer_average': 0.06489562533333333, 'personas_logist
+ician_average': 0.06080141633333334, 'personas_commander_average': 0.05657678216
+6666666, 'personas_entrepreneur_average': 0.04902771349999999, 'personas_logicia
+n_average': 0.08445854266666665, 'personas_protagonist_average': 0.0580167890000
+00006, 'personas_architect_average': 0.076304473, 'personas_campaigner_average':
+ 0.06375732399999999, 'personas_entertainer_average': 0.05049359783333333, 'pers
+onas_defender_average': 0.05906181333333333, 'personas_virtuoso_average': 0.0670
+4744883333333}
+{'personality_openness_average': 0.5469730965, 'personality_extraversion_average
+': 0.4645815011666666, 'personality_agreeableness_average': 0.49695702700000005,
+ 'personality_conscientiousness_average': 0.4833923249999999}
+{'sentiment_average': 0.6486755233333333}
+{'twitter_engagement_average': 0.5436369109166667}
+{'emotion_anger_average': 0.116518108, 'emotion_joy_average': 0.2139398779166666
+, 'emotion_fear_average': 0.27202818575000004, 'emotion_sadness_average': 0.3185
+2473725, 'emotion_surprise_average': 0.07898909266666666}
+{'political_Libertarian_average': 0.18236965816666664, 'political_Liberal_averag
+e': 0.17393878158333334, 'political_Green_average': 0.4682966800833333, 'politic
+al_Conservative_average': 0.17539488066666667}
+{'personas_advocate_average': 0.07427786258333334, 'personas_debater_average': 0
+.06124312433333332, 'personas_mediator_average': 0.081146088, 'personas_consul_a
+verage': 0.04680850775, 'personas_executive_average': 0.04597072641666667, 'pers
+onas_adventurer_average': 0.0649919045, 'personas_logistician_average': 0.062150
+08316666667, 'personas_commander_average': 0.05701862133333333, 'personas_entrep
+reneur_average': 0.04874995199999999, 'personas_logician_average': 0.08289122974
+999999, 'personas_protagonist_average': 0.05832110950000002, 'personas_architect
+_average': 0.0760071965, 'personas_campaigner_average': 0.06315825516666666, 'pe
+rsonas_entertainer_average': 0.04992155066666667, 'personas_defender_average': 0
+.06023570816666667, 'personas_virtuoso_average': 0.06710808041666666}
+{'personality_openness_average': 0.5436731127500001, 'personality_extraversion_a
+verage': 0.463689348, 'personality_agreeableness_average': 0.49727108358333333,
+'personality_conscientiousness_average': 0.486382748}
