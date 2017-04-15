@@ -187,7 +187,7 @@ def analyze_tweets(tweet_dict):
 
     return indico_dict
 
-def csv_write(month_data):
+def csv_write(month_data, screen_name):
 
     print('done calculating, writing now')
 
@@ -199,7 +199,7 @@ def csv_write(month_data):
         "personas:entrepreneur","personas:logician","personas:protagonist","personas:architect","personas:campaigner","personas:entertainer","personas:defender","personas:virtuoso","emotion:anger","emotion:joy","emotion:fear","emotion:sadness","emotion:surprise"])
         #each month is a list of dicts
         for month in month_data:
-            writer.writerow([month,screen_name,month_data[month][0]['sentiment'],month_data[month][1]['twitter_engagement'],
+            writer.writerow(["'"+month+"'","'"+screen_name+"'",month_data[month][0]['sentiment'],month_data[month][1]['twitter_engagement'],
             month_data[month][3]['personality']['openness'],month_data[month][3]['personality']['extraversion'],
             month_data[month][3]['personality']['agreeableness'],month_data[month][3]['personality']['conscientiousness'],
             month_data[month][2]['political']['Libertarian'],month_data[month][2]['political']['Liberal'],month_data[month][2]['political']['Green'],
@@ -217,7 +217,7 @@ def create_user_data(screen_name):
     tweets = parse_tweets(screen_name)
     tweets = organize_tweets(tweets)
     tweets = analyze_tweets(tweets)
-    csv_write(tweets)
+    csv_write(tweets, screen_name)
 
 if __name__ == '__main__':
     #get_all_tweets(screen_name)
@@ -225,3 +225,4 @@ if __name__ == '__main__':
     #tweets = organize_tweets(tweets)
     #tweets = analyze_tweets(tweets)
     #csv_write(tweets)
+    #create_user_data('hampshirecolg')
