@@ -120,14 +120,14 @@ def gaugeChart(handle, api):
         data2 = six_month_average(handle, api)
         data3 = one_year_average(handle, api)
         print(type(data))
-        val1 = data['sentiment_average']
+        val1 = float(data['sentiment_average'])
         lists.append(val1)
-        val2 = data2['sentiment_average']
+        val2 = float(data2['sentiment_average'])
         lists.append(val2)
-        val3 = data3['sentiment_average']
+        val3 = float(data3['sentiment_average'])
         lists.append(val3)
         print('hiiii')
-        return jsonify(lists)
+        return render_template("chart.html", value = [val1], labels = ["label"])
     else: #twitter-engagement
         lists = []
         data = one_month_average(handle, api)
@@ -135,11 +135,11 @@ def gaugeChart(handle, api):
         data3 = one_year_average(handle, api)
         for key in data.keys():
             print(key)
-        val1 = data['twitter_engagement_average']
+        val1 = float(data['twitter_engagement_average'])
         lists.append(val1)
-        val2 = data2['twitter_engagement_average']
+        val2 = float(data2['twitter_engagement_average'])
         lists.append(val2)
-        val3 = data3['twitter_engagement_average']
+        val3 = float(data3['twitter_engagement_average'])
         lists.append(val3)
         return jsonify(lists)
 

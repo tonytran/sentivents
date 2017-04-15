@@ -1,0 +1,22 @@
+<div class="ct-chart ct-minor-seventh"></div>
+	<script>
+	new Chartist.Bar('.ct-chart', {
+  	labels: {{labels}},
+  	series: {{values}}
+	},{
+  	width: '600px',
+  	height: '400px'
+	}, {
+  	seriesBarDistance: 30,
+  	axisX: {
+    	offset: 60
+  	},
+  	axisY: {
+    	offset: 80,
+    	labelInterpolationFnc: function(value) {
+      	return value + ' CHF'
+    	},
+    	scaleMinSpace: 30
+  	}
+	});
+	</script>

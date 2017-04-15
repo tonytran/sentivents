@@ -21,7 +21,8 @@
     <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-
+    <link rel="stylesheet" href="/static/bower_components/chartist/dist/chartist.css">
+    <script src="/static/bower_components/chartist/dist/chartist.min.js"></script>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -100,7 +101,7 @@
                 </select>
                 </div> -->
                 <div id = "formy" class="form-group">
-                <p> Enter in a twitter handle you want to <strong><i>anal</i></strong>yze </p>
+                <p> Enter in a twitter handle you want to analyze </p>
                 @<input id = "twitterHandle" name = "twitterHandle" type = "text"/>
                 </div>
                 <div id ="dropdown">
@@ -109,9 +110,12 @@
                 <p><button id ="first" name = "first" type="button" onclick ="popup()"/>Analyze!</p>
 
 
-                <div id = "chart">
+                <div id = "chart" class = "ct-chart">
                 </div>
-
+                <!-- <div id = "chart2" class = "ct-chart">
+                </div>
+                <div id = "chart3" class = "ct-chart">
+                </div> -->
                 <!-- </form> -->
             </div>
             <div class="row">
@@ -355,29 +359,6 @@ function popup() {
 
 
 
-//
-// function display(){
-//   assign();
-//   var data = `<select name = "display" onChange="chooseType()">
-//     <option id = "one-month" value = one-month > One Month </option>
-//     <option id = "six-month" value = six-month> Six Months  </option>
-//     <option id = "one-year" value = one-year> One Year </option>
-//
-//   </select>`
-//   $("#dropdown2").append(data);
-//
-// }
-//
-// function chooseType() {
-//   assign2();
-//   var data = `<select name = "breakdown">
-//     <option id = "one-month" value = month> By Month </option>
-//     <option id = "six-month" value = average> By Average  </option>
-//
-//   </select>`
-//
-//   $("#dropdown3").append(data);
-// }
 
 function submit2() {
   return true;
@@ -392,7 +373,60 @@ function submit() {
     contentType: 'application/json;charset=UTF-8',
     //data : {'data': handle},
     success: function(response) {
-      //alert("save");
+      alert(response[0]);
+
+      var lis = [response[0]]
+      if (api == 'sentiment'){
+        new Chartist.Bar('.ct-chart', {
+      	labels: ["positive"],
+      	series: [[1]]
+    	},{
+      	width: '600px',
+      	height: '400px'
+    	}, {
+      	seriesBarDistance: 30,
+      	axisX: {
+        	offset: 60
+      	},
+      	axisY: {
+        	offset: 80,
+        	labelInterpolationFnc: function(value) {
+          	return value + ' CHF'
+        	},
+        	scaleMinSpace: 30
+      	}
+	});
+      }
+      else if (api == 'political'){
+
+      }
+      else if (api == 'twitter_engagement'){
+
+      }
+      else if (api == 'personality'){
+
+      }
+      else if (api == 'emotion'){
+
+      }
+      else if (api == 'personas'){
+        var chart = new Chartist.Bar('#chart', {
+        labels: response[0],
+        series: [
+          response[1]
+        ]
+      }, {
+        high: 10,
+        low: -10,
+        axisX: {
+          labelInterpolationFnc: function(value, index) {
+            return index % 2 === 0 ? value : null;
+          }
+        }
+      });
+
+            };
+
       console.log(response);
     },
 
@@ -422,6 +456,17 @@ function assign() {
 //     method: "POST",
 //     url: "/charts"
 //   })
+// chart.on('draw', function(data) {
+//   // If this draw event is of type bar we can use the data to create additional content
+//   if(data.type === 'bar') {
+//     // We use the group element of the current series to append a simple circle with the bar peek coordinates and a circle radius that is depending on the value
+//     data.group.append(new Chartist.Svg('circle', {
+//       cx: data.x2,
+//       cy: data.y2,
+//       r: Math.abs(Chartist.getMultiValue(data.value)) * 2 + 5
+//     }, 'ct-slice-pie'));
+//   }
+// });
 $("#data").submit(function(e) {
     e.preventDefault();
 });
