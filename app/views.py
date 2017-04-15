@@ -1,6 +1,6 @@
 from app import app
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request
+#from chart import one_month_average
 
 @app.route('/')
 @app.route('/index')
@@ -37,23 +37,13 @@ def peakCircles():
     pass
 def gaugeChart():
     pass
-@app.route('/post' , methods = ["POST"])
-def queryOnUser():
-    if request.method == 'POST':
-        form = request.form
-        twitterHandle = form['user-handle']
-        selection = form['type']
-        #pass data in and do processing
+@app.route('/charts/<handle>/<api>' , methods = ["POST"])
+def charts(handle, api):
+    clicked = None
+    if request.method == "POST":
+        print(handle, api)
 
-        if selection == "sentiment-analysis":
-            pass
-        elif selection == "political-analysis":
-            pass
-        elif selection == "myers-briggs":
-            pass
-        elif selection == "twitter-engagement":
-            pass
-        elif selection == "personality":
-            pass
-        elif selection == "emotion":
-            pass
+        # api =  form["api"]
+        # print(handle, api)
+        print('hello')
+    return "hello"
