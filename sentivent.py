@@ -11,7 +11,7 @@ consumer_key = 'XuJqupkF9ZUq8oIz921Nl141O'
 consumer_secret = '9z0JyLdMNRT7brH14wh32fUqxbpL0yDXu70Ez8mJFpLifmv3nl'
 access_key = '853038411426521090-yviLNx5KWrXE7lXrubdjKlwOQ0WoC8R'
 access_secret = 'wCxcNrBfJi2PhTVw9Xgi1DF4EFb1Z38cS7z0PAgC3Jd6D'
-screen_name = "HackSentivents"
+#screen_name = "HackSentivents"
 
 
 def get_all_tweets(screen_name):
@@ -212,9 +212,16 @@ def csv_write(month_data):
             month_data[month][4]['emotion']['joy'],month_data[month][4]['emotion']['fear'],month_data[month][4]['emotion']['sadness'],
             month_data[month][4]['emotion']['surprise']])
 
-if __name__ == '__main__':
+def create_user_data(screen_name):
     get_all_tweets(screen_name)
     tweets = parse_tweets(screen_name)
     tweets = organize_tweets(tweets)
     tweets = analyze_tweets(tweets)
     csv_write(tweets)
+
+if __name__ == '__main__':
+    #get_all_tweets(screen_name)
+    #tweets = parse_tweets(screen_name)
+    #tweets = organize_tweets(tweets)
+    #tweets = analyze_tweets(tweets)
+    #csv_write(tweets)
